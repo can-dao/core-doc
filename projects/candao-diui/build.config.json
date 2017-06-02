@@ -1,0 +1,8 @@
+{
+  "version":"0.1.0"
+  ,"name":"DI UI"
+  ,"entryTitles":{
+    "index":"首页"
+  }
+  ,"port":8077
+}

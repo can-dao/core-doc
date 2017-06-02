@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><%=htmlWebpackPlugin.options.pageName%></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	
+	<script type="text/javascript">
+		var ___VERSION = '<%=htmlWebpackPlugin.options.version%>'
+		,___ENV = '<%=htmlWebpackPlugin.options.env%>'
+		,___PROJECT = '<%=htmlWebpackPlugin.options.projectName%>';
+	</script>
+	<link href="//cdn.bootcss.com/github-markdown-css/2.6.0/github-markdown.min.css" rel="stylesheet">
+	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow-night-eighties.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<div id="app"></div>
+	<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+	<script src="//cdn.bootcss.com/vue/2.2.4/vue.min.js"></script>
+	<script src="//cdn.bootcss.com/vue-router/2.2.1/vue-router.min.js"></script>
+</body>
+</html>

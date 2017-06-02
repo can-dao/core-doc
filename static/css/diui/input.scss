@@ -1,0 +1,17 @@
+$border:#bfcbd9;
+$border_hover:#8694a4;
+$border_focus:#3cc9fe;
+$font:#a9afb7;
+$radius:5px;
+input.di-input{
+  border:1px solid $border;
+  border-radius: $radius;
+  padding:0 8px;
+  line-height: 1;
+  color:$font;
+  font-size:1em;
+  font-weight: normal;
+  min-width:200px;
+  &:hover{ border-color:$border_hover}
+  &:focus{ border-color:$border_focus}
+}
