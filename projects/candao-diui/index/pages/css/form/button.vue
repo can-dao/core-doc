@@ -1,12 +1,15 @@
 <template>
 <div>
   <di-markdown :content="mds.button" id="md-intro"></di-markdown>
+
 </div>
 </template>
 
 <script>
 import * as Com from '@/common'
 import * as Utils from 'build/plugs/utils'
+
+import '@/static/css/diui/button.scss'
 
 export default{
   name: 'css-base'

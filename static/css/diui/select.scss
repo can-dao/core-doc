@@ -1,0 +1,26 @@
+$border:#bfcbd9;
+$border_hover:#8694a4;
+$border_focus:#3cc9fe;
+$font:#a9afb7;
+$radius:5px;
+select.di-select{
+  border:1px solid $border;
+  border-radius: $radius;
+  padding:0 8px;
+  line-height: 1;
+  height: 36px;
+  color:$font;
+  font-size:1em;
+  font-weight: normal;
+  min-width:200px;
+  &:hover{ border-color:$border_hover};
+  &:focus{ border-color:$border_focus};
+  option{
+    min-width:200px;
+    border:1px solid $border;
+  }
+}
+select.di-disabled{
+  cursor:not-allowed;
+  background:#eaeef3;
+}

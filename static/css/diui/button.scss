@@ -1,0 +1,108 @@
+$cancel:#9FA4A9;
+$set:#4E85CD;
+$warning:#E97856;
+$danger:#FD303E;
+$info:#50BFFF;
+$other:#F09342;
+$default:#315381;
+
+$radius: 5px;
+$padding: 5px 10px;
+
+.btn{
+	display: inline-block;
+	padding:$padding;
+	border-radius:$radius;
+	border:1px solid transparent;
+	cursor:pointer;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.btn-link {
+	color: #315381;
+	background-color: #FFF;
+	border-color: #315381;
+	&:hover{
+		color: #FFF;
+		background-color: #315381;
+		border-color: #315381;
+	}
+}
+
+.btn-default{
+	color: #FFF;
+	background-color: $default;
+	border-color:$default;
+}
+
+
+.btn-font{
+padding: $padding;
+color:$default;
+background-color:transparent;
+}
+
+/*禁用*/
+	.btn[disabled]{
+		cursor: not-allowed;
+		opacity:0.3;
+	}
+	.btn-link[disabled]:hover{
+		color: #315381;
+		background-color: #FFF;
+		border-color: #315381;
+	}
+
+
+/*颜色*/
+
+@each $member in cancel, set, warning, danger,info,other {
+    .btn-#{$member} {
+    	@if $member == cancel {background: $cancel;border:$cancel 1px solid;}
+    	@if $member == set {background: $set;border:$set 1px solid;}
+    	@if $member == warning {background: $warning;border:$warning 1px solid;}
+    	@if $member == danger {background: $danger;border:$danger 1px solid;}
+    	@if $member == info {background: $info;border:$info 1px solid;}
+    	@if $member == other {background: $other;border:$other 1px solid;}
+
+    	color:#FFF;
+		&:hover{
+			background:#FFF;
+			@if $member == cancel {color:$cancel;border-color:$cancel;}
+	    	@if $member == set {color: $set;border-color:$set;}
+	    	@if $member == warning {color: $warning;border-color:$warning;}
+	    	@if $member == danger {color: $danger;border-color:$danger;}
+	    	@if $member == info {color: $info;border-color:$info;}
+	    	@if $member == other {color: $other;border-color:$other;}
+		}
+    }
+    .btn-#{$member}.show{
+    	@extend .btn-#{$member}:hover
+    }
+    .btn-#{$member}[disabled]:hover{
+    	@if $member == cancel {background: $cancel;border:$cancel 1px solid;}
+    	@if $member == set {background: $set;border:$set 1px solid;}
+    	@if $member == warning {background: $warning;border:$warning 1px solid;}
+    	@if $member == danger {background: $danger;border:$danger 1px solid;}
+    	@if $member == info {background: $info;border:$info 1px solid;}
+    	@if $member == other {background: $other;border:$other 1px solid;}
+    	color:#FFF;
+    }
+  }
+
+/*图标*/
+	.icon:before{padding:4px; }
+	.icon-right:before{float: right;}
+
+	/*按钮组*/
+	.btn-group {display: inline-block;
+	.btn{display: table-cell;border-radius: 0;}
+	}
+	.btn-group .btn:first-child{border-radius: 5px 0 0 5px;}
+	.btn-group .btn:last-child{border-radius: 0 5px 5px 0;}
+
+/*不同尺寸*/
+	.btn-big{font-size: 1.5em;}
+	.btn-small{font-size: 0.8em;}
+	.btn-wee{font-size: 0.5em;}

@@ -8,6 +8,8 @@
 import * as Com from '@/common'
 import * as Utils from 'build/plugs/utils'
 
+import '@/static/css/diui/select.scss'
+
 export default{
   name: 'css-base'
   ,data(){

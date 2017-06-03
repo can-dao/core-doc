@@ -7,6 +7,7 @@
 <script>
 import * as Com from '@/common'
 import * as Utils from 'build/plugs/utils'
+import '@/static/css/diui/radio.scss'
 
 export default{
   name: 'css-base'
