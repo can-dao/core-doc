@@ -13,7 +13,7 @@ export default{
   ,data(){
     return {
       mds:{
-        checkbox:require('./../../../mds/css/checkbox.md')
+        checkbox:require('./checkbox.md')
       }
     }
   }

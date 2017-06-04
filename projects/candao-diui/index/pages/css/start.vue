@@ -13,7 +13,7 @@ export default{
   ,data(){
     return {
       mds:{
-        color:require('./../../mds/css/start.md')
+        color:require('./start.md')
       }
     }
   }

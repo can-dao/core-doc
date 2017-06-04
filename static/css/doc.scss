@@ -1,0 +1,72 @@
+@import "diui";
+
+body{
+	font-family: $font-family;
+	font-weight:normal;
+}
+.content-wrap{
+	width:1150px;
+	margin:0 auto;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+#header{
+	padding:0px 20px;box-shadow: $shadow-for-w;position:fixed;top:0;left:0;right:0;
+	background-color:$color-neu-black-l;
+	display: flex;overflow: hidden;height:50px;
+	justify-content:flex-start;
+	.logo {
+		font-family:'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+		background:url('./../images/logo_w.png') no-repeat left center;
+		padding-left:60px;height:30px;
+		position: relative;width:560px;
+		margin:10px 0;
+		span.title{cursor: pointer;color:#fff;margin-left:10px;font-size:$font-size-large;line-height:1;position: absolute;bottom:3px;}
+	}
+	.nav {
+		line-height: 1;font-size:$font-size-small;
+		ul{
+			display:flex;height:100%;
+			align-items:center;
+			li{
+				display: block;padding:0 10px;text-align:center;
+				a{
+					color:$color-neu-gray;display:block;height:100%;border-bottom:3px solid transparent;
+					&:hover,&.active{color:$color-neu-gray-l;line-height:3.3;border-bottom:3px solid $color-neu-gray-l}
+					&:active{color:$color-neu-gray-el;}
+				}
+			}
+		} 
+	}
+}
+
+#body{
+	display:flex;
+	> div{overflow:hidden;overflow-y:auto;position:fixed;top:51px;bottom:0;}
+
+	.sidebar{
+		width:200px;padding:40px 0 30px 60px;left:0;font-weight:300;
+
+		.part{margin-top:20px;}
+		.part ul li{margin-top:5px;}
+		.part ul ul{
+			padding-left:10px;margin-top:5px;
+			a{line-height:1.5em;}
+		}
+		.part ul a{
+			display:block;line-height:2em;
+			&.active{font-weight:400;}
+		}
+		.part h3 {line-height:2em;margin-top:1em;}
+		.part h4 {color:#798494;font-weight:normal;margin-top:15px;}
+	}
+	.main{left:260px;right:0;padding:20px}
+}
+
+
+a:link{color:$color-main!important;}
+a.active,a:hover,em{color:$color-main-l;}
+a:active{color:$color-main-d;}
+
+.markdown-body{font-size:$font-size-small;}

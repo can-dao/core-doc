@@ -13,7 +13,7 @@ export default{
   ,data(){
     return {
       mds:{
-        gbutton:require('./../../mds/components/gbutton.md')
+        gbutton:require('./gbutton.md')
       }
     }
   }

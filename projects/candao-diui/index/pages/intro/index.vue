@@ -7,13 +7,14 @@
 <script>
 import * as Com from '@/common'
 import * as Utils from 'build/plugs/utils'
+require("@/static/images/example.png");
 
 export default{
   name: 'intro-index'
   ,data(){
     return {
       mds:{
-        index:require('./../../mds/intro/index.md')
+        index:require('./index.md')
       }
     }
   }
@@ -21,7 +22,6 @@ export default{
     Com.hide();
   }
   ,mounted(){
-    hljs.initHighlightingOnLoad();
 
   }
   ,methods:{
@@ -36,9 +36,7 @@ export default{
 </script>
 
 <style scoped>
-
 </style>
 
 <style>
-
 </style>

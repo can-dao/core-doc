@@ -1,7 +1,14 @@
 <template>
 <div class="app">
   <div id="header">
-    <div class="logo"><img :src="logo" /><span class="title">DIUI 中文网</span></div>
+    <div class="logo" @click="goHome"><span class="title">DIUI 中文网</span></div>
+    <div class="nav">
+      <ul>
+        <li><router-link to="/css">通用样式</router-link></li>
+        <li><router-link to="/components">扩展组件</router-link></li>
+      </ul>
+
+    </div>
   </div>
   <div id="body">
     <div class="sidebar">
@@ -78,26 +85,10 @@ export default{
     
   }
   ,methods:{
-    goto(id,$event){
-      var targtet = document.getElementById('md-'+id);
-      if(targtet){
-        var main = document.getElementById("main");
-        main.scrollTop = targtet.offsetTop;
-        this.hashActive($event);
-      }
+    goHome(){
+      this.$router.push("/")
     }
-    ,hashActive($event){
-
-      var liBros = $event.target.parentElement.parentElement.children;
-      for(var i =0,l=liBros.length;i<l;i++){
-        var liBro = liBros[i];
-        for(var j =0,ll=liBro.children.length;j<ll;j++){
-          liBro.children[j].classList.value = '';
-        }
-      }
-
-      $event.target.classList.value = 'active';
-    }
+    
     
   }
 	,components:{
@@ -113,27 +104,5 @@ export default{
 </style>
 
 <style>
-#header{
-  padding:10px 20px;box-shadow: 0 0 1px rgba(0,0,0,0.25);position:fixed;top:0;left:0;right:0;
-  background-color:#fafafa;
-}
-#header .logo {font-family:'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;}
-#header .logo img {vertical-align:text-bottom;}
-#header .logo span.title{margin-left:10px;text-shadow: 0 1px 0 #fff;font-size:1.2em;font-weight:100;line-height:30px;}
 
-#body{display:flex;}
-#body > div{overflow:hidden;overflow-y:auto;position:fixed;top:56px;bottom:0;}
-
-#body .sidebar{width:200px;padding:40px 0 30px 60px;left:0;}
-#body .sidebar .part{margin-top:20px;}
-#body .sidebar .part ul li{margin-top:5px;}
-#body .sidebar .part ul ul{padding-left:10px;margin-top:5px;}
-#body .sidebar .part ul a{display:block;line-height:2em;}
-#body .sidebar .part ul ul a{line-height:1.5em;}
-#body .sidebar .part h3 {line-height:2em;margin-top:1em;}
-#body .sidebar .part h4 {color:#798494;font-weight:normal;margin-top:15px;}
-
-#body .main{left:260px;right:0;padding:20px}
-a{color:#1b2025;}
-a.active,a:hover{color:#5b6cc1;font-weight:bold;}
 </style>

@@ -7,14 +7,13 @@
 <script>
 import * as Com from '@/common'
 import * as Utils from 'build/plugs/utils'
-import '@/static/css/diui/radio.scss'
 
 export default{
   name: 'css-base'
   ,data(){
     return {
       mds:{
-        radio:require('./../../../mds/css/radio.md')
+        radio:require('./radio.md')
       }
     }
   }

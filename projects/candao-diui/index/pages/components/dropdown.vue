@@ -13,7 +13,7 @@ export default{
   ,data(){
     return {
       mds:{
-        dropdown:require('./../../mds/components/dropdown.md')
+        dropdown:require('./dropdown.md')
       }
     }
   }

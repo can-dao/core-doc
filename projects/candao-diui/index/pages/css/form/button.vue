@@ -9,14 +9,12 @@
 import * as Com from '@/common'
 import * as Utils from 'build/plugs/utils'
 
-import '@/static/css/diui/button.scss'
-
 export default{
   name: 'css-base'
   ,data(){
     return {
       mds:{
-        button:require('./../../../mds/css/button.md')
+        button:require('./button.md')
       }
     }
   }

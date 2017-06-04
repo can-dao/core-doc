@@ -65,7 +65,9 @@ const defalutConfig = {
     }
 
     ,{
-      path: '/components',component:EmptyParent,children:[
+      path: '/components'
+      ,component:EmptyParent
+      ,children:[
         {path:'/components/start',component:ComponentsStart}
         ,{path:'/components/ionicons',component:ComponentsIonicons}
         ,{path:'/components/dropdown',component:ComponentsDropdown}

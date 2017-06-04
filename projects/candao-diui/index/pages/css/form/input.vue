@@ -8,14 +8,12 @@
 import * as Com from '@/common'
 import * as Utils from 'build/plugs/utils'
 
-import '@/static/css/diui/input.scss'
-
 export default{
   name: 'css-base'
   ,data(){
     return {
       mds:{
-        input:require('./../../../mds/css/input.md')
+        input:require('./input.md')
       }
     }
   }

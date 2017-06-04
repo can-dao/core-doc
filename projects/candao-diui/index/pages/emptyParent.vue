@@ -1,11 +1,11 @@
 <template>
 <div class="empty-parent">
-  <router-view></router-view>
+  <transition name="fade"><keep-alive><router-view></router-view></keep-alive></transition>
 </div>
 </template>
 
 <script>
-
+import * as Com from '@/common'
 export default{
   name: 'empty-parent'
   ,data(){
@@ -14,7 +14,7 @@ export default{
     }
   }
   ,created(){
-    
+    Com.hide();
   }
   ,mounted(){
 

@@ -1,0 +1,52 @@
+/* 
+ * $*-*		:  noraml style
+ * $*-*-l 	:  Light
+ * $*-*-el 	:  ExtraLight
+ * $*-*-d 	:  Dark
+ */
+
+/* color */
+//主色 品牌颜色
+$color-main:#5b6cc1;
+$color-main-l:#5b6cc1;
+$color-main-d:#2b335b;
+
+//辅助色 按钮，凸显作用
+$color-sub-info:#3bb5e4;
+$color-sub-success:#13ce66;
+$color-sub-warning:#f47e5a;
+$color-sub-danger:#fd303e;
+
+//中性色/层次色 用于文本，背景，边框色
+$color-neu-black:#1b2025;
+$color-neu-black-l:#323a44;
+$color-neu-black-el:#475669;
+
+$color-neu-silver:#798494;
+$color-neu-silver-l:#99a9bf;
+$color-neu-silver-el:#c0ccda;
+
+$color-neu-gray:#aaaaaa;
+$color-neu-gray-l:#d7d9dc;
+$color-neu-gray-el:#ecebeb;
+
+$color-neu-frame:#6c7a86;
+$color-neu-frame-l:#a6babf;
+$color-neu-frame-el:#cbdbdf;
+
+$color-neu-white:#ffffff;
+$color-neu-white-d:#f9fafc;
+
+//border
+$shadow-for-l: 0 1px 0 rgba(255,255,255,0.8);
+$shadow-for-w: 0 0 1px rgba(0,0,0,0.25);
+
+/* font */
+$font-family:"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+$font-size-body:16px;
+$font-size:100%; /*16px*/
+$font-size-max:1.25em; /*20px*/
+$font-size-large:1.125em; /*18px*/
+$font-size-small:0.875em; /*14px*/
+$font-size-mini:0.75em; /*12px*/
+

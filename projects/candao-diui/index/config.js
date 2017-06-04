@@ -51,7 +51,17 @@ const initVm = ()=>{
 
 
   Router = new VueRouter(_Router);
-
+  Router.beforeEach(function(to, from, next) {
+    if(to.path === '/css'){
+      next(false);
+      Router.push("/css/start");
+    }else if(to.path === '/components'){
+      next(false);
+      Router.push("/components/start");
+    }else{
+      next(true);
+    }
+  });
   vm = new Vue({
     template:"<App/>"
     ,render: h => h(App)

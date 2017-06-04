@@ -13,7 +13,7 @@ export default{
   ,data(){
     return {
       mds:{
-        start:require('./../../mds/components/start.md')
+        start:require('./start.md')
       }
     }
   }

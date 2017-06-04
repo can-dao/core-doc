@@ -13,7 +13,7 @@ export default{
   ,data(){
     return {
       mds:{
-        ionicons:require('./../../mds/components/ionicons.md')
+        ionicons:require('./ionicons.md')
       }
     }
   }
