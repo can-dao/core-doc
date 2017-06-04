@@ -1,17 +1,162 @@
 $border:#bfcbd9;
 $border_hover:#8694a4;
 $border_focus:#3cc9fe;
+$border_disable: #e5e9ef;
+
 $font:#a9afb7;
+$font_disable: #cfd3d8;
+
+$co-48515c: #48515c;
+
 $radius:5px;
-input.di-input{
+$placeholder: #a9afb7;
+$placeholder_disable: #cfd3d8;
+
+$background: #f5f5f5;
+$background_disable: #eaeef3;
+
+$icon-search: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAUVBMVEUAAABIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxFE8EgAAAAGnRSTlMABeSip3/Yl5PorEY49t+3iHluPZqZc3FaEfxO2SEAAAB7SURBVBjTXYxZEsMgDEOxwUBC9nTV/Q/a2gFmWn1Y4zeS3FdnYHCYXBVlcJLEyHSBO4SUC7L9E6RGBdYamVqXg9qQXNON9WLvQGCJ3EEabGPpG8uoVvCoYMdp7vE0PxDpSnrE7dgiIkJtl3XGvBbySqreen5Ia3v3R14fejkErPezmJoAAAAASUVORK5CYII=";
+$icon-edit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAATlBMVEUAAABIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVxIUVwaWat4AAAAGXRSTlMABbYT5quRJcidYTcdC+3e1MCjloh9V0IevupxHAAAAFVJREFUCNdVzlcKwDAMA9DE2U331v0v2rrg4OrvIQQyKl2ImhFAr1po25QKsFgh0XUfJBwy4Kszwpm3QeimPz1zbRyZxUi+dmu0TPUzvdzV6zNTVXwAQzsFYf7gIdwAAAAASUVORK5CYII=";
+
+@each $input in '::-webkit-input', ':-moz', '::-moz', ':-ms-input' {
+  input#{$input}-placeholder, textarea#{$input}-placeholder{
+    color: $placeholder;
+  }
+  input[disabled]#{$input}-placeholder, textarea[disabled]#{$input}-placeholder{
+    color: $background_disable;
+  }
+}
+
+input.di-input,
+textarea.di-textarea{
   border:1px solid $border;
   border-radius: $radius;
-  padding:0 8px;
-  line-height: 1;
+  -webkit-border-radius: $radius;
   color:$font;
   font-size:1em;
   font-weight: normal;
-  min-width:200px;
+  background-color: $background;
   &:hover{ border-color:$border_hover}
   &:focus{ border-color:$border_focus}
+}
+input.di-input{
+  min-width:200px;
+  height: 36px;
+  line-height: 1;
+  padding:0 8px;
+}
+.di-input[disabled]{
+  cursor: not-allowed;
+  color: $font_disable;
+  background-color: $background_disable;
+  border-color: $border_disable;
+  &:hover{ border-color: $border_disable}
+  &:focus{ border-color: $border_disable}
+}
+.di-input-size__show{
+  height: 42px;
+}
+.di-input-size__show input{
+  float: left;
+  margin-right: 10px;
+}
+input.di-input__hover{
+  border-color: $border_hover;
+}
+input.di-input__focus{
+  border-color: $border_focus;
+}
+input.di-input__large{
+  height: 42px;
+  font-size: 1.25em;
+}
+input.di-input__small{
+  height: 30px;
+  font-size: 0.9em;
+}
+textarea.di-textarea{
+  min-width: 414px;
+  min-height: 54px;
+  padding:0 8px;
+  line-height: 1.5;
+  resize: vertical;
+}
+.di-input__search,
+.di-input__edit{
+  background-repeat: no-repeat;
+  padding-right: 30px!important;
+}
+.di-input__search{
+  background-image: url($icon-search);
+}
+.di-input__edit{
+  background-image: url($icon-edit);
+}
+
+.di-input-mixin{
+  width: 760px;
+  position: relative;
+  display: table;
+  background-color: $background;
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+.di-input-mixin .di-input{
+  width: 100%;
+}
+@each $inputmixin in 'di-input-mixin .di-input', 'di-input-mixin .di-input-mixin__dotcom', 'di-input-mixin .di-input-mixin__select', 'di-input-mixin .di-input-mixin__search' {
+  .#{$inputmixin}{
+    display: table-cell;
+  }
+}
+.di-input-mixin__select{
+  width: 120px;
+  .di-select{
+    min-width: 120px;
+    background-color: $background;
+  }
+}
+.di-input-mixin__select .di-select{
+  position: absolute;
+  min-width: 120px;
+  background-color: $background;
+  border-right-color: transparent;
+}
+.di-input-mixin .di-input,
+.di-input-mixin__select .di-select{
+  border-top-right-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+}
+.di-input-mixin__select + .di-input{
+  border-top-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+}
+.di-input-mixin__dotcom,
+.di-input-mixin__search{
+  border: 1px solid $border;
+  border-left-color: transparent;
+  border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+}
+.di-input-mixin__dotcom{
+  color: $co-48515c;
+  width: 57px;
+  text-align: center;
+  &:after{
+    content: ".com";
+  }
+}
+.di-input-mixin__search{
+  width: 45px;
+  text-align: center;
+  &:after{
+    vertical-align: middle;
+    content: url($icon-search);
+  }
 }
