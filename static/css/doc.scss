@@ -31,11 +31,13 @@ body{
 			align-items:center;
 			li{
 				display: block;padding:0 10px;text-align:center;
-				a{
+				a,a:visited{
 					color:$color-neu-gray;display:block;height:100%;border-bottom:3px solid transparent;
-					&:hover,&.active{color:$color-neu-gray-l;line-height:3.3;border-bottom:3px solid $color-neu-gray-l}
-					&:active{color:$color-neu-gray-el;}
 				}
+				a:hover,a.active{color:$color-neu-gray-l;line-height:3.3;border-bottom:3px solid $color-neu-gray-l}
+				a:active{color:$color-neu-gray-el;}
+
+				
 			}
 		} 
 	}
@@ -64,9 +66,8 @@ body{
 	.main{left:260px;right:0;padding:20px}
 }
 
-
-a:link{color:$color-main!important;}
-a.active,a:hover,em{color:$color-main-l;}
+a{text-decoration:none!important;}
+a:link,a:visited{color:$color-main;}
 a:active{color:$color-main-d;}
-
+a:hover/*,a.active*/,em{color:$color-main-l;}/*$color-main-l*/
 .markdown-body{font-size:$font-size-small;}
