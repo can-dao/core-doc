@@ -1,20 +1,16 @@
 <template>
-<div>
-  <di-markdown :content="mds.radio"></di-markdown>
+<div class="empty-parent">
+  <transition name="fade"><keep-alive><router-view></router-view></keep-alive></transition>
 </div>
 </template>
 
 <script>
 import * as Com from '@/common'
-import * as Utils from 'build/plugs/utils'
-
 export default{
-  name: 'css-base'
+  name: 'empty-parent'
   ,data(){
     return {
-      mds:{
-        radio:require('./radio.md')
-      }
+      
     }
   }
   ,created(){

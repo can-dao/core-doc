@@ -1,6 +1,6 @@
 <template>
 <div>
-  <di-markdown :content="mds.color" id="md-intro"></di-markdown>
+  <di-markdown :content="mds.color"></di-markdown>
 </div>
 </template>
 

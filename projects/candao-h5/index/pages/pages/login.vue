@@ -1,6 +1,6 @@
 <template>
-<div>
-  <di-markdown :content="mds.radio"></di-markdown>
+<div class="index">
+  <di-markdown :content="mds.index" id="md-intro"></di-markdown>
 </div>
 </template>
 
@@ -9,11 +9,11 @@ import * as Com from '@/common'
 import * as Utils from 'build/plugs/utils'
 
 export default{
-  name: 'css-base'
+  name: 'intro-index'
   ,data(){
     return {
       mds:{
-        radio:require('./radio.md')
+        index:require('./login.md')
       }
     }
   }
@@ -35,9 +35,7 @@ export default{
 </script>
 
 <style scoped>
-
 </style>
 
 <style>
-
 </style>

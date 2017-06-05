@@ -1,6 +1,6 @@
 <template>
 <div>
-  <di-markdown :content="mds.checkbox" id="md-intro"></di-markdown>
+  <di-markdown :content="mds.checkbox"></di-markdown>
 </div>
 </template>
 

@@ -1,8 +1,8 @@
 {
   "version":"0.1.0"
-  ,"name":"DI UI"
+  ,"name":"H5 v2"
   ,"entryTitles":{
     "index":"首页"
   }
-  ,"port":8880
+  ,"port":8881
 }

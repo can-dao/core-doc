@@ -1,6 +1,7 @@
 <template>
 <div>
-  <di-markdown :content="mds.radio"></di-markdown>
+  <di-markdown :content="mds.pagination"></di-markdown>
+
 </div>
 </template>
 
@@ -13,7 +14,7 @@ export default{
   ,data(){
     return {
       mds:{
-        radio:require('./radio.md')
+        pagination:require('./pagination.md')
       }
     }
   }

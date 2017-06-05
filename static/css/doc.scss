@@ -1,4 +1,4 @@
-@import "diui";
+@import "./_var";
 
 body{
 	font-family: $font-family;
@@ -13,7 +13,7 @@ body{
 
 #header{
 	padding:0px 20px;box-shadow: $shadow-for-w;position:fixed;top:0;left:0;right:0;
-	background-color:$color-neu-black-l;
+	background-color:$color-neu-black-l;z-index:2;
 	display: flex;overflow: hidden;height:50px;
 	justify-content:flex-start;
 	.logo {
@@ -30,11 +30,11 @@ body{
 			display:flex;height:100%;
 			align-items:center;
 			li{
-				display: block;padding:0 10px;text-align:center;
+				display: block;padding:0 10px;text-align:center;height:44px;;line-height:3.3;
 				a,a:visited{
 					color:$color-neu-gray;display:block;height:100%;border-bottom:3px solid transparent;
 				}
-				a:hover,a.active{color:$color-neu-gray-l;line-height:3.3;border-bottom:3px solid $color-neu-gray-l}
+				a:hover,a.active{color:$color-neu-gray-l;border-bottom:3px solid $color-neu-gray-l}
 				a:active{color:$color-neu-gray-el;}
 
 				
@@ -45,7 +45,7 @@ body{
 
 #body{
 	display:flex;
-	> div{overflow:hidden;overflow-y:auto;position:fixed;top:51px;bottom:0;}
+	> div{overflow:hidden;overflow-y:auto;position:fixed;top:50px;bottom:0;}
 
 	.sidebar{
 		width:200px;padding:40px 0 30px 60px;left:0;font-weight:300;

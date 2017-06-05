@@ -1,11 +1,11 @@
 <template>
 <div class="app">
   <div id="header">
-    <div class="logo" @click="goHome"><span class="title">DIUI 中文网</span></div>
+    <div class="logo" @click="goHome"><span class="title">H5 v2 Doc</span></div>
     <div class="nav">
       <ul>
-        <li><router-link to="/css">通用样式</router-link></li>
-        <li><router-link to="/components">扩展组件</router-link></li>
+        <li><router-link to="/dir">目录结构</router-link></li>
+        <li><router-link to="/pages">页面说明</router-link></li>
       </ul>
 
     </div>
@@ -54,33 +54,19 @@ export default{
       logo:require("@/static/images/logo.png")
       ,sidebars:[
         {name:'介绍',children:[
-          {name:'DIUI 是什么?',path:'/intro/index'}
-        ]}
-        ,{name:'全局基础样式',children:[
-          {name:'起步',path:'/css/start'}
-          ,{name:'基础',path:'/css/base',children:[
-            {name:'色彩',path:'/css/base/color'}
-          ]}
-          ,{name:'表单',path:'/css/form',children:[
-            {name:'form',path:'/css/form/index'}
-            ,{name:'input',path:'/css/form/input'}
-            ,{name:'button',path:'/css/form/button'}
-            ,{name:'radio',path:'/css/form/radio'}
-            ,{name:'checkbox',path:'/css/form/checkbox'}
-            ,{name:'select',path:'/css/form/select'}
-          ]}
-          ,{name:'数据',path:'/css/data',children:[
-            {name:'table/list',path:'/css/data/table'}
-            ,{name:'card',path:'/css/data/card'}
-            ,{name:'pagination',path:'/css/data/pagination'}
-          ]}
-        ]}
-        ,{name:'基于Vue2组件',children:[
-          {name:'起步',path:'/components/start'}
-          ,{name:'ionicons字体图标',path:'/components/ionicons'}
-          ,{name:'下拉菜单',path:'/components/dropdown'}
-          ,{name:'按钮组',path:'/components/gbutton'}
-        ]}
+            {name:'H5 v2 是什么？',path:'/intro/index'}
+            ,{name:'如何添加一个页面？',path:'/intro/addPage'}
+          ]
+        }
+        ,{name:'目录结构',children:[
+          	{name:'全局',path:'/dir/all'}
+          ]
+        }
+        ,{name:'页面说明',path:'/pages',children:[
+            {name:'首页',path:'/pages/index'}
+            ,{name:'登录页',path:'/pages/login'}
+          ]
+        }
       ]
     }
   }

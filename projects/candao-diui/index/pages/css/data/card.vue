@@ -1,6 +1,7 @@
 <template>
 <div>
-  <di-markdown :content="mds.radio"></di-markdown>
+  <di-markdown :content="mds.card"></di-markdown>
+
 </div>
 </template>
 
@@ -13,7 +14,7 @@ export default{
   ,data(){
     return {
       mds:{
-        radio:require('./radio.md')
+        card:require('./card.md')
       }
     }
   }

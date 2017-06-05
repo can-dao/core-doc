@@ -1,6 +1,6 @@
 <template>
 <div class="index">
-  <di-markdown :content="mds.color" id="md-intro"></di-markdown>
+  <di-markdown :content="mds.start"></di-markdown>
 </div>
 </template>
 
@@ -13,7 +13,7 @@ export default{
   ,data(){
     return {
       mds:{
-        color:require('./start.md')
+        start:require('./start.md')
       }
     }
   }

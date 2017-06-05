@@ -1,6 +1,6 @@
 <template>
 <div class="index">
-  <di-markdown :content="mds.index" id="md-intro"></di-markdown>
+  <di-markdown :content="mds.index"></di-markdown>
 </div>
 </template>
 
